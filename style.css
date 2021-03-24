@@ -1,0 +1,22 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+div{
+    border: 1px solid pink;
+}
+
+main{
+    height: calc(100vh - 120px);
+}
+
+.top-nav-bar,.bottom-play-bar{
+    height: 60px;
+}
+
+main{
+    display: flex;
+}
