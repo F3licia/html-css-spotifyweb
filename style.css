@@ -3,20 +3,54 @@
     margin: 0px;
     box-sizing: border-box;
     position: relative;
-}
-
-div{
-    border: 1px solid pink;
-}
-
-main{
-    height: calc(100vh - 120px);
-}
-
-.top-nav-bar,.bottom-play-bar{
-    height: 60px;
+    color: white;
 }
 
 main{
     display: flex;
+    height: calc(100vh - 60px);
 }
+
+.top-bar{
+    text-align: right;
+    height: 60px;
+    width: 100%;
+    background-color: darkgrey;
+}
+
+
+.main-page{
+    width: 100%;
+    background-color: #141922;
+}
+
+.nav-side-bar{
+    width: 250px;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+    .logo-img{
+    padding: 5px;
+     height: 60px;
+     width: 150px;
+    }
+
+    .playlist{
+        flex-grow: 1;
+        }
+
+.bottom-play-bar{
+    position: fixed;
+    height: 60px;
+    right: 0;
+    left:0;
+    background-color: #282828;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
