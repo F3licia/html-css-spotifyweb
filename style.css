@@ -11,10 +11,10 @@ div{
     border: 1px solid pink;
 }*/
 
-
-ul,a {list-style: none;
-      text-decoration-line: none;
-    }
+ul,a {
+    list-style: none;
+    text-decoration-line: none;
+}
  
 main{
     display: flex;
@@ -46,13 +46,13 @@ main{
 }
 
 .sidebar{
-display: flex;
-height: calc(100% - 60px);
-flex-direction: row;
-flex-wrap: wrap;
-justify-content: flex-start;
-align-content: stretch;
-overflow: hidden;
+    display: flex;
+    height: calc(100% - 60px);
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: stretch;
+    overflow: hidden;
 }
     .login{
         align-self: flex-end;
@@ -83,6 +83,7 @@ overflow: hidden;
 .logo-img{
     height: 60px;
     width: 150px;
+    cursor: pointer;
 }
 
 .fa.fa-plus{
@@ -111,7 +112,11 @@ overflow: hidden;
 }
 
 
- /*bottom player*/
+ /*bottom player*/         
+
+.bottom-play-bar .fa{
+    cursor: pointer;
+ }
 
 .bottom-play-bar{
     right: 0;
@@ -126,9 +131,9 @@ overflow: hidden;
 }
 
 .now-playing {
-   margin-top: auto;
-   margin-bottom: auto;
-   width: 250px;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 250px;
 }
     .now-playing *{
     vertical-align: middle;
@@ -136,11 +141,32 @@ overflow: hidden;
     }
     .track-name *{
         display: block;
+        cursor: pointer;
     }
+        .track-name *:nth-child(2){
+        font-weight: lighter;
+        opacity: 60%;
+        
+        }
+        .track-name *:nth-child(2):hover{
+            opacity: 100%;
+            text-decoration: underline;
+        }
+
+
+
     .collection{
         width: 100px;
         text-align: right;
     }
+
+        .collection .mini-icon{
+            opacity: 60%;
+        }
+        .collection .mini-icon:hover{
+            opacity: 100%;
+        }
+
     .mini-icon{
         margin-left: 10px;
         text-align: right;
@@ -155,15 +181,22 @@ overflow: hidden;
 
     
 .player-bar{  
-    width: 200px;
+    width: 210px;
+    height: 35px;;
     margin: auto;
     display: flex;
     justify-content: space-between;
     align-items: center
 }
-.fa.fa-play-circle-o{
-font-size: 30px;
-}
+    .player-bar .fa.fa-play-circle-o{
+        font-size: 30px;
+    }
+    .player-bar .fa.fa-play-circle-o:hover{
+        font-size: 35px;
+        margin-left: -2px;
+        margin-right: -2px;
+    }
+
 .player-display{
     display: flex;
     justify-content: space-between;
@@ -171,25 +204,51 @@ font-size: 30px;
     width: 400px;
     font-size: small;
 }
+
 .bar{
     height: 4px;
     width: 100%;
     margin-left: 20px;
     margin-right: 20px;
     border-radius: 3px;
-    background-color: #5a5a5a
+    background-color: #5a5a5a;
+    cursor: pointer;
 }
+    .progress-bar {
+        height: 100%;
+        width: 30%;
+        border-radius: 3px 0px 0px 3px;
+        background-color: #c1c1c1;  
+    }
+    .progress-bar:hover {
+        background-color: #adff2f;
+    }
+    .progress-bar:hover::after {
+        content:' \2022' ;
+        color: #c1c1c1;
+        font-size: 50px;
+        position: relative;
+        bottom: 27px;
+        left: 90%;
+    }
 
-.vol{
-    width: 80px;
-    margin-right: 10px;
-    background-color: #c1c1c1
-}
-.volume-bar {
+
+
+
+
+
+.volume {
     width: 200px;
     display: flex;
     align-items: center
  }
+
+    .vol{
+        width: 80px;
+        margin-right: 10px;
+        background-color: #5a5a5a;
+    }
+
 
  /*--------main-page*/
 /*top bar*/
@@ -197,9 +256,8 @@ font-size: 30px;
 .top-bar{
     position: fixed;
     top:0px;
-    right: 0;
-    z-index: 1;
-    
+    right: 15px;
+    z-index: 1;  
     text-align: right;
     height: 75px;
     width: 100%;
@@ -210,15 +268,21 @@ font-size: 30px;
  
 
 .top-bar button {
-    margin-right: 30px;
+    margin-right: 20px;
     font-size: small;
     font-weight: bold;
-    vertical-align: middle;
     background-color: transparent;
     border-radius: 20px;
-    padding: 7px 35px;
+    padding: 5px 30px;
     border: 1px solid white ;   
  }
+
+    .top-bar button:hover {
+        margin-right: 10px;
+        font-size: 15px;
+        padding: 7px 35px;
+        cursor: pointer;
+    }
 
  /*center page*/
 
@@ -229,7 +293,6 @@ font-size: 30px;
     }
 
  li .fake-un-line { 
-    opacity: 0%;
     text-align: center;
     padding: 0px;
     height: 20px;
@@ -240,9 +303,7 @@ font-size: 30px;
     transform: translate(-50%);
     border-bottom: 2px solid #adff2f;
     }
-        li .fake-un-line:hover {
-            opacity: 100%;
-            }
+
     
 ul.nav-music-sections li{
     opacity: 60%;
@@ -255,10 +316,18 @@ ul.nav-music-sections li{
         opacity: 100%;
     }
 
+    
+.section-title *:nth-child(2){
+    opacity: 60%;
+    font-weight: lighter;
+    margin-top: 10px;
 
- .main-title-container{  
- display: flex;
- flex-wrap: wrap;
+}
+
+ .main-titles-container{  
+     margin: 15px 0;
+    display: flex;
+    flex-wrap: wrap;
  }
 
  .center-page,.section-title{
@@ -302,6 +371,7 @@ ul.nav-music-sections li{
     top:0;
     left:0;
     background-color:rgba(0, 0, 0, 0.7);
+    cursor: pointer;
     z-index: 1;
 }
         .overlay:hover {
