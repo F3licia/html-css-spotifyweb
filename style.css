@@ -220,7 +220,6 @@ font-size: 30px;
     border: 1px solid white ;   
  }
 
-
  /*center page*/
 
  .nav-music-sections{
@@ -228,6 +227,23 @@ font-size: 30px;
     text-align: center;
     padding: 10px 0px;
     }
+
+ li .fake-un-line { 
+    opacity: 0%;
+    text-align: center;
+    padding: 0px;
+    height: 20px;
+    width: 40%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+    border-bottom: 2px solid #adff2f;
+    }
+        li .fake-un-line:hover {
+            opacity: 100%;
+            }
+    
 ul.nav-music-sections li{
     opacity: 60%;
     display: inline;
@@ -235,11 +251,10 @@ ul.nav-music-sections li{
     text-transform: uppercase;
     font-size: small;
 }
-ul.nav-music-sections li:hover {
-    opacity: 100%;
-    border-bottom: 2px solid #adff2f;
-    padding: 0; 
- }
+    ul.nav-music-sections li:hover{
+        opacity: 100%;
+    }
+
 
  .main-title-container{  
  display: flex;
@@ -250,31 +265,32 @@ ul.nav-music-sections li:hover {
      padding-left: 10px;
      padding-right: 30px;
  }
+ 
  .card{
      margin: 20px 10px;
      max-width: calc((100% / 6) - 20px);
  }
-    .card p{
-        margin-top: 10px;
-        opacity: 70%;
-    }
-    .round{
-        border-radius: 50%;
-    }
+        .card p{
+            margin-top: 10px;
+            opacity: 70%;
+        }
+        .round{
+            border-radius: 50%;
+        }
 
-    .cover-img{
-        max-width:100%;
-        min-height: auto;
-    }
-    .cover-img img{
-        width:100%;
-        height: auto;
-    }
-    .info-track{
-        margin: 10px 5px;
-        font-size: small;
-        text-align: center;
-    }
+        .cover-img{
+            max-width:100%;
+            min-height: auto;
+        }
+        .cover-img img{
+            width:100%;
+            height: auto;
+        }
+        .info-track{
+            margin: 10px 5px;
+            font-size: small;
+            text-align: center;
+        }
 
 .overlay {
     text-align: center;
@@ -296,3 +312,6 @@ ul.nav-music-sections li:hover {
         }
 
        
+
+
+     
